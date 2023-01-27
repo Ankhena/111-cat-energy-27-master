@@ -1,0 +1,45 @@
+.field-block {
+  padding: 2px 0 23px 0;
+}
+
+@media (min-width: $tablet-width) {
+  .field-block {
+    margin: 0 67px 0 70px;
+    padding: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .field-block {
+    margin: 0 110px 0 110px;
+  }
+}
+
+.field-block__text {
+  @include font-oswald-small-fsize16;
+  min-width: 280px;
+  min-height: 150px;
+  padding: 9px 12px 9px 15px;
+  margin: 0;
+  box-sizing: border-box;
+  color: $special-dark-gray;
+  text-transform: uppercase;
+  border: 1px solid $light-gray;
+  cursor: pointer;
+}
+
+@media (min-width: $tablet-width) {
+  .field-block__text {
+    width: 631px;
+    min-height: 174px;
+    padding: 10px 19px 10px 19px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .field-block__text {
+    width: 1220px;
+  }
+}

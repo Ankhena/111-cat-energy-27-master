@@ -1,0 +1,136 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 300px;
+  min-height: 66px;
+  margin: 0  auto;
+  padding-left: 20px;
+  background-color: $white;
+}
+
+@media (min-width: $tablet-width) {
+  .header {
+    width: 708px;
+    min-height: 52px;
+    align-items: start;
+    padding: 0 30px 35px 30px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .header {
+    width: 1440px;
+    min-height: 108px;
+    margin: 0 auto;
+    padding: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .header--picture {
+    position: relative;
+  }
+}
+
+
+.header__logo-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 204px;
+  margin-bottom: 10px;
+}
+
+@media (min-width: $tablet-width) {
+  .header__logo-wrapper {
+    width: 174px;
+    min-height: 52px;
+    margin: 0;
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .header__logo-wrapper {
+    justify-content: start;
+    width: 610px;
+    padding: 53px 0 42px 110px;
+  }
+}
+
+.header__logo-image {
+  display: block;
+  width: 33px;
+  height: 38px;
+  margin-top: 10px;
+}
+
+.header__logo-image:hover {
+  opacity: 0.7;
+}
+
+.header__logo-image:active {
+  opacity: 0.5;
+}
+
+@media (min-width: $tablet-width) {
+  .header__logo-image {
+    width: 72px;
+    height: 52px;
+    margin: 0;
+  }
+
+  .header__logo-image:hover {
+    opacity: 0.7;
+  }
+
+  .header__logo-image:active {
+    opacity: 0.5;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .header__logo-image {
+    width: 83px;
+    margin: 0;
+    margin-right: 14px;
+  }
+
+  .header__logo-image:hover {
+    opacity: 0.7;
+  }
+
+  .header__logo-image:active {
+    opacity: 0.5;
+  }
+}
+
+.header__logo-text {
+  display: block;
+  width: 101px;
+  height: 18px;
+  margin-top: 23px;
+  margin-right: 12px;
+}
+
+
+.header__logo-text:hover {
+  opacity: 0.7;
+}
+
+.header__logo-text:active {
+  opacity: 0.5;
+}
+
+@media (min-width: $tablet-width) {
+  .header__logo-text {
+    display: none;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .header__logo-text {
+    display: none;
+  }
+}

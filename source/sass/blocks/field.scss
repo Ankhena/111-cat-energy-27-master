@@ -1,0 +1,170 @@
+.field {
+  width: 280px;
+  min-height: 100%;
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+@media (min-width: $tablet-width) {
+  .field {
+    width: 630px;
+    padding: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .field {
+    width: 569px;
+  }
+}
+
+.field__label {
+  @include font-oswald-small-fsize16;
+  max-width: 94px;
+  margin: 13px 0 14px 0;
+  text-transform: uppercase;
+  color: $special-dark-gray;
+}
+
+@media (min-width: $tablet-width) {
+  .field__label {
+    max-width: 117px;
+    margin: 11px 0 11px 2px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .field__label--intends {
+    margin: 10px 13px 12px 0;
+  }
+}
+
+.field__input {
+  @include font-oswald-small-fsize16;
+  flex-grow: 1;
+  max-height: 45px;
+  width: 100%;
+  padding: 14px 52px  11px 20px;
+  margin: 0 0 14px 14px;
+  text-transform: uppercase;
+  color: $special-dark-gray;
+  border: 1px solid $light-gray;
+  cursor: pointer;
+}
+
+.field__input:hover {
+  border: 1px solid $special-gray;
+}
+
+.field__input:focus {
+  outline: 2px solid $special-dark-gray;
+}
+
+// .error {
+//   border: 2px solid #ff8282;
+// }
+
+@media (min-width: $tablet-width) {
+  .field__input {
+    flex-grow: 1;
+    max-height: 52px;
+    width: 100%;
+    padding: 11px 20px 11px 19px;
+    margin: 0 0 18px 13px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .field__input {
+    box-sizing: border-box;
+  }
+}
+
+.field__email {
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 20px;
+  mask-image: url("../img/svg/stack/stack.svg#email");
+  background-color: $black;
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  left: calc(100% - 36px);
+  top: 20%;
+}
+
+.field__input:focus + .field__email {
+  background-color: $basic-green;
+}
+
+.error > .field__email-error {
+  background-color: $status-error;
+}
+
+
+@media (min-width: $tablet-width) {
+  .field__email {
+    left: calc(100% - 36px);
+    top: 23%;
+  }
+}
+
+.field__phone {
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 20px;
+  mask-image: url("../img/svg/stack/stack.svg#phone");
+  background-color: $black;
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  left: calc(100% - 36px);
+  top: 20%;
+}
+
+.field__input:focus + .field__phone {
+  background-color: $basic-green;
+}
+
+.error > .field__phone-error {
+  background-color: $status-error;
+}
+
+@media (min-width: $tablet-width) {
+  .field__phone {
+    left: calc(100% - 36px);
+    top: 20%;
+  }
+}
+
+.field__input--intends {
+  margin-left: 10px;
+  margin-bottom: 13px;
+  padding: 13px 50px 14px 15px;
+  white-space: nowrap;
+}
+
+@media (min-width: $tablet-width) {
+  .field__input--intends {
+    margin-left: 20px;
+    margin-bottom: 13px;
+    padding: 12px 50px 14px 19px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .field__input--intends {
+    margin-left: 10px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .field--modify {
+    width: 571px;
+  }
+}

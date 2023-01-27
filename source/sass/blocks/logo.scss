@@ -1,0 +1,63 @@
+.logo__picture {
+  width: 100%;
+  display: block;
+  margin: 0;
+}
+
+@media (min-width: $tablet-width) {
+  .logo__picture {
+    width: 174px;
+    height: 52px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .logo__picture {
+    width: 202px;
+    height: 59px;
+  }
+}
+
+.logo__text {
+  display: block;
+  margin: 0;
+}
+
+@media (min-width: $tablet-width) {
+  .logo__text {
+    width: 90px;
+    height: 19px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .logo__text {
+    width: 105px;
+    height: 21px;
+  }
+}
+
+.logo__text--indents {
+  width: 128px;
+  height: 24px;
+  margin: auto;
+  padding: 40px 76px 20px 76px;
+  border-bottom: 1px solid #d9d9d9;
+}
+
+@media (min-width: $tablet-width) {
+  .logo__text--indents {
+    width: 143px;
+    height: 26px;
+    margin: 0;
+    margin-right: 158px;
+    padding: 0;
+    border: none;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .logo__text--indents {
+    @include ziro-intends;
+  }
+}

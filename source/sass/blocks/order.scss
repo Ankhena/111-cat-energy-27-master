@@ -1,0 +1,113 @@
+.order {
+  display: flex;
+  flex: 0 0 auto;
+  justify-content: center;
+  align-items: center;
+  min-width: 62px;
+  min-height: 20px;
+  padding: 10px 109px;
+  margin: 0;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: $white;
+  border: none;
+  background-color: $basic-green;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.order:hover {
+  background-color: #5eaa2f;
+}
+
+.order:active {
+  background-color: #5eaa2f;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+@media (min-width: $tablet-width) {
+  .order {
+    width: 62px;
+    padding: 10px 93px;
+    margin-left: 3px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .order {
+    padding: 10px 53px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .order--modify {
+    width: 192px;
+    padding: 10px 220px;
+    margin: 4px 1px 0 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .order--modify {
+    width: 192px;
+    padding: 10px 26px;
+    margin-top: -1px;
+  }
+}
+
+.order--background {
+  background-color: $special-white;
+}
+
+.order--background:hover {
+  background-color: $special-gray2;
+}
+
+.order--background:active {
+  background-color: $special-gray2;
+  color: rgba(68, 68, 68, 0.3);
+}
+
+.order--color {
+  color: $special-dark-gray;
+}
+
+.order--intends {
+  padding: 10px 94px;
+  margin: 0;
+}
+
+@media (min-width: $desktop-width) {
+  .order--intends {
+    width: 91px;
+    padding: 10px 39px;
+  }
+}
+
+.order--form-intends {
+  width: 280px;
+  padding: 10px 44px;
+}
+
+@media (min-width: $tablet-width) {
+  .order--form-intends {
+    width: 282px;
+    min-height: 52px;
+    box-sizing: border-box;
+    padding: 13px 45px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .order--form-intends {
+    width: 568px;
+    padding: 13px 188px;
+    margin-right: 28px;
+    margin-left: 2px;
+  }
+}

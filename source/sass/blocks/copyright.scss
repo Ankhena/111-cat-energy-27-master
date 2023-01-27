@@ -1,0 +1,37 @@
+.copyright {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 19px 0 22px 0;
+  text-decoration: none;
+  font-family: "Lato", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: $special-dark-gray;
+}
+
+.academy {
+  width: 115px;
+}
+
+.copyright svg {
+  fill: $special-gray3;
+}
+
+.copyright:hover svg {
+  fill: $basic-green;
+}
+
+.copyright:active {
+  opacity: 0.3;
+}
+
+@media (min-width: $tablet-width) {
+  .copyright {
+    width: 165px;
+    padding: 0;
+  }
+}

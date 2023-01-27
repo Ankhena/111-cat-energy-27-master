@@ -1,0 +1,100 @@
+.radio {
+  position: relative;
+}
+
+.radio:not(:last-child) {
+  margin-bottom: 25px;
+}
+
+.radio__control-label {
+  @include font-oswald-small-fsize16;
+  display: block;
+  margin: 10px 0 0 45px;
+  text-transform: uppercase;
+  color: $special-black2;
+}
+
+@media (min-width: $tablet-width) {
+  .radio__control-label {
+    margin: 5px 0 0 60px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .radio:last-child > .radio__label > .radio__control-label {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .radio:first-child > .radio__label > .radio__control-label {
+    margin-top: 0;
+  }
+}
+
+.radio__control-mark {
+  position: absolute;
+  top: -5px;
+  left: 0;
+  width: 27px;
+  height: 27px;
+  border-radius: 50%;
+  background-color: $white;
+  border: 1px solid $special-gray;
+  cursor: pointer;
+}
+
+@media (min-width: $tablet-width) {
+  .radio__control-mark {
+    top: 0;
+    width: 37px;
+    height: 37px;
+  }
+}
+
+.radio__input[type="radio"]:checked + .radio__control-mark::before {
+  position: absolute;
+  content: "";
+  top: 28%;
+  left: 29%;
+  width: 13px;
+  height: 13px;
+  background-color: $basic-green;
+  border-radius: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: $tablet-width) {
+  .radio__input[type="radio"]:checked + .radio__control-mark::before {
+    width: 18px;
+    height: 18px;
+    top: 26%;
+    left: 29%;
+  }
+}
+
+.radio__input[type="radio"]:hover ~ .radio__control-mark {
+  border: 1px solid #bababa;
+}
+
+.radio__input[type="radio"]:focus ~ .radio__control-mark {
+  outline: 2px solid $special-dark-gray;
+}
+
+
+.radio__input[type="radio"]:disabled ~ .radio__control-mark {
+  opacity: 0.3;
+}
+
+.radio__input[type="radio"]:disabled ~ .radio__control-label {
+  opacity: 0.3;
+}
+
+@media (min-width: $tablet-width) {
+  .form__radio-wrapper {
+    padding-bottom: 28px;
+  }
+}

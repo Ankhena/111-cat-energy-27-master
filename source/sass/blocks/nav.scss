@@ -1,0 +1,194 @@
+.nav {
+  min-height: 64px;
+  width: 65px;
+  background-color: $white;
+}
+
+@media (min-width: $tablet-width) {
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    width: 440px;
+    margin: auto 0;
+    padding-top: 18px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .nav {
+    width: 479px;
+    min-height: 40px;
+    padding: 69px 110px 42px 131px;
+    margin: 0;
+    font-family: "Oswald", "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .nav--picture::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 50%;
+    min-width: 1440px;
+    width: 100vh;
+    min-height: 694px;
+    background-image: url("../img/nutrition-cat-desktop.jpg");
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-size: 1044px 696px;
+    background-color: rgb(97, 164, 57);
+    overflow: hidden;
+    z-index: 1;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/nutrition-cat-desktop@2x.jpg");
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .nav--color {
+    background-color: $white;
+  }
+}
+
+.nav__toggle {
+  position: relative;
+  width: 65px;
+  height: 65px;
+  background-color: $white;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: $mobile-width-only) {
+  .nav--closed .nav__toggle::before {
+    content: "";
+    position: absolute;
+    top: 22px;
+    left: 22px;
+    width: 24px;
+    height: 1.5px;
+    background-color: $black;
+    box-shadow: 0 8px 0 0 $black, 0 16px 0 0 $black;
+  }
+
+  .nav--closed .nav__toggle:hover::before {
+    opacity: 0.5;
+  }
+
+  .nav--closed .nav__toggle:active::before {
+    opacity: 0.3;
+  }
+}
+
+.nav--opened .nav__toggle {
+  top: 0;
+  left: 0;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    width: 26px;
+    height: 1.5px;
+    background-color: $black;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:hover::before,
+  &:hover::after {
+    opacity: 0.5;
+  }
+
+  &:active::before,
+  &:active::after {
+    opacity: 0.3;
+  }
+}
+
+@media (max-width: $mobile-width-only) {
+  .nav--closed .site-list__item {
+    display: none;
+
+    &--active {
+      display: block;
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .nav__toggle {
+    display: none;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .nav__toggle {
+    display: none;
+  }
+}
+
+.nav--opened .nav__wrapper {
+  position: absolute;
+  min-width: 320px;
+  width: 100%;
+  content: "";
+  top: 65px;
+  left: 0;
+  z-index: 10;
+  background-color: $white;
+}
+
+@media (min-width: $tablet-width) {
+  .nav--opened .nav__wrapper {
+    position: static;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .nav--opened .nav__wrapper {
+    position: static;
+    min-width: 478px;
+  }
+}
+
+@media (max-width: $mobile-width-only) {
+  .nav--nojs .nav__toggle {
+    display: none;
+  }
+
+  .nav--nojs .nav__wrapper {
+    position: static;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .nav--nojs .site-list {
+    display: block;
+    margin-top: 65px;
+    margin-left: -250px;
+  }
+
+  .nav--nojs .site-list__item {
+    display: block;
+    margin: 0 auto;
+    background-color: $white;
+  }
+}
